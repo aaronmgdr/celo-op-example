@@ -1,16 +1,14 @@
-import { parseEther } from 'viem'
+import { parseEther, type Hash } from 'viem'
 import { getTransactionReceipt } from 'viem/actions'
 import { getWithdrawals } from 'viem/op-stack'
 import { account, publicClientL1, publicClientL2, walletClientL1 } from '../config'
 
 // TODO don't hardcode the hash, add it as a param
-export async function buildProveWithdrawal() {
-    console.log('Building proof of withdrawal...')
-
+export async function buildProveWithdrawal(hashFromInitiate: Hash) {
     console.log('Getting transaction receipt...')
     const receipt = await getTransactionReceipt(publicClientL2, {
         // hash is from output of initiateWithdrawal
-        hash: '0x1b1352423a9fc7add2527613f0a3b74ad6be7b49589a5af5bf6fa68c207f5c67',
+        hash: hashFromInitiate,
     })
 
     console.log('Getting withdrawal...')

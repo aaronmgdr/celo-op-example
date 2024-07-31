@@ -7,6 +7,5 @@ export async function getGames() {
     const games = await publicClientL1.getGames({ 
         targetChain: l2Chain, 
     }) 
-
     return games
 }

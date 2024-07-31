@@ -20,6 +20,8 @@ const receipt = await publicClientL2.waitForTransactionReceipt({ hash: initiated
 
 console.info("waitForTransactionReceipt", receipt)
 
+console.info("this takes a while... why not get some fresh air?")
+
 const {output, withdrawal } = await waitToProve(initiatedHash)
 
 console.info('waited', withdrawal, output)

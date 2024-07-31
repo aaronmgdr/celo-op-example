@@ -1,5 +1,4 @@
 import { account, publicClientL2 } from '../config'
-import { wagmiAbi } from './wagmi-abi';
 import { parseEther } from 'viem'
 
 export const estimateTotalGas = async () => {
@@ -12,7 +11,5 @@ export const estimateTotalGas = async () => {
     })
 
     console.log("Total gas estimate: ", totalGas);
+    return  totalGas
 }
-
-// bun ./publicActionL2/estimateTotalGas.ts
-await estimateTotalGas();

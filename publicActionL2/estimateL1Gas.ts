@@ -15,7 +15,5 @@ export const estimateL1Gas = async () => {
     })
 
     console.log("L1 gas estimate: ", l1Gas);
+    return l1Gas
 }
-
-// bun ./publicActionL2/estimateL1Gas.ts
-await estimateL1Gas();

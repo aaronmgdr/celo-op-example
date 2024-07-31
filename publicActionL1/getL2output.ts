@@ -9,6 +9,6 @@ export async function getL2Output(blockNumber: bigint) {
         l2BlockNumber: blockNumber, 
         targetChain: l2Chain, 
     }) 
-
+    return output
 }
 

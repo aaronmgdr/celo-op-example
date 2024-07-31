@@ -8,7 +8,5 @@ export async function getGame(block: bigint) {
     l2BlockNumber: block, 
     targetChain: l2Chain, 
     }) 
-    console.info(`game at block ${block}`, game)
-
     return game
 }

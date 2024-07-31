@@ -1,10 +1,9 @@
-import { base } from 'viem/chains'
-import { account, publicClientL2, walletClientL2 } from '../config'
+import { account, publicClientL2 } from '../config'
 import { parseEther } from 'viem'
  
 
 export async function estimateInitiateWithdrawalGas() {
-
+  console.info("estimateInitiateWithdrawalGas")
   const gas = await publicClientL2.estimateInitiateWithdrawalGas({
     account,
     request: {
@@ -13,5 +12,6 @@ export async function estimateInitiateWithdrawalGas() {
       value: parseEther('0.0001')
     },
   })
+  console.info('estimated gas to initiate', gas)
+  return gas
 }
-

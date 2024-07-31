@@ -7,14 +7,16 @@ export async function getWithdrawalStatus(hash: Hash ) {
 
     const receipt = await publicClientL2.getTransactionReceipt({
         hash
-      })
+    })
     
+    console.info("withdrawal receipt", receipt)
+
     const status = await publicClientL1.getWithdrawalStatus({ 
         receipt, 
         targetChain: l2Chain, 
       }) 
     
-      console.info("withdrawal status", status)
-      return status
+    console.info("withdrawal status", status)
+    return status
 }
 

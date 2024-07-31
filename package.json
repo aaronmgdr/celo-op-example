@@ -3,7 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun run index.ts"
+    "start": "bun run index.ts",
+    "deposit": "bun run flows/deposit.ts",
+    "withdraw": "bun run flows/withdraw.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

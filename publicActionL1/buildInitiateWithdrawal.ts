@@ -6,8 +6,8 @@ import { parseEther } from 'viem'
 export const buildInitiateWithdrawal = async () => {
     const args = await publicClientL1.buildInitiateWithdrawal({ 
         account,
-        to: '0xad5DC090223b3f6b9a47C354B808FF593FfA1e25', 
-        value: parseEther('0.001'), 
+        to: account.address, 
+        value: parseEther('0.00001'), 
     })
     console.info('builtInitiateWithdrawal', args)
     return args

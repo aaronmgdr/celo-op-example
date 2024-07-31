@@ -2,7 +2,6 @@ import { account, publicClientL2 } from '../config'
 import { wagmiAbi } from './wagmi-abi';
 
 // expected to fail as celo does not have L1 fee
-
 export const estimateContractL1Fee = async () => {
     console.log('Estimating L1 fee for contract call')
 
@@ -14,7 +13,8 @@ export const estimateContractL1Fee = async () => {
       })
 
     console.log("L1 fee estimate: ", l1Fee);
+    return l1Fee
 }
 
 // bun ./publicActionL2/estimateContractL1Fee.ts
-await estimateContractL1Fee();
+

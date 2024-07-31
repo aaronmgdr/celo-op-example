@@ -15,7 +15,5 @@ export const estimateContractTotalFee = async () => {
       })
 
     console.log("Total fee estimate: ", l1Fee);
+    return l1Fee
 }
-
-// bun ./publicActionL2/estimateContractTotalFee.ts
-await estimateContractTotalFee();

@@ -10,8 +10,8 @@ export async function estimateDepositTransactionGas() {
         account,
         request: {
             gas: 21_000n,
-            mint: parseEther('000.1'),
-            to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+            mint: parseEther('0.0000001'),
+            to: account.address,
         },
         targetChain: l2Chain,
     })

@@ -1,5 +1,4 @@
 import { account, publicClientL2 } from '../config'
-import { wagmiAbi } from './wagmi-abi';
 import { parseEther } from 'viem'
 
 export const estimateTotalFee = async () => {
@@ -12,7 +11,8 @@ export const estimateTotalFee = async () => {
     })
 
     console.log("Total fee estimate: ", totalFee);
+    return totalFee
 }
 
-// bun ./publicActionL2/estimateTotalFee.ts
-await estimateTotalFee();
+// fails with 
+// - The chain does not have the contract "gasPriceOracle" configured.
